@@ -8,34 +8,46 @@
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
 <body>
-
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
+  <main>
+    <div class="card--container">
+      <img src="images/bg-card-front.png" alt="" class="card card--front"/>
+      <span class="card--number">0000 0000 0000 0000</span>
+      <div class="name-exp--container">
+        <span class="card--name">Jane Appleseed</span>
+        <span class="card--exp">00/00</span>
+        <!-- EXP. DATE TO BE CHANGED/ DATE & MONTH EACH IS A SINGLE SPAN WHICH CHANGES ON FORM INPUT -->
+      </div>
+    </div>
+    <div class="card--container">
+      <img src="images/bg-card-back.png" alt="" class="card card--back"/>
+      <span class="card--cvc">000</span>
+    </div>
+    
+    
   
+  
+    Cardholder Name
+    e.g. Jane Appleseed
+  
+    Card Number
+    e.g. 1234 5678 9123 0000
+  
+    Exp. Date (MM/YY)
+    MM
+    YY
+  
+    CVC
+    e.g. 123
+  
+    Confirm
+  
+    <!-- Completed state start -->
+  
+    Thank you!
+    We've added your card details
+    Continue
+
+  </main>
   <script src="script/index.js"></script>
 </body>
 </html>
