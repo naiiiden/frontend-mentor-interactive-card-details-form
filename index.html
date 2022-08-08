@@ -9,18 +9,23 @@
 </head>
 <body>
   <main>
-    <div class="card--container">
-      <img src="images/bg-card-front.png" alt="" class="card card--front"/>
-      <span class="card--number">0000 0000 0000 0000</span>
-      <div class="name-exp--container">
-        <span class="card--name">Jane Appleseed</span>
-        <span class="card--exp">00/00</span>
-        <!-- EXP. DATE TO BE CHANGED/ DATE & MONTH EACH IS A SINGLE SPAN WHICH CHANGES ON FORM INPUT -->
+    <div class="card--bg">
+      <div class="card--main--container">
+        <div class="card--container">
+          <img src="images/bg-card-front.png" alt="" class="card card--front"/>
+          <img src="images/card-logo.svg" alt="" class="card--logo"/>
+          <span class="card--number">0000 0000 0000 0000</span>
+          <div class="name-exp--container">
+            <span class="card--name">JANE APPLESEED</span>
+            <span class="card--exp">00/00</span>
+            <!-- EXP. DATE TO BE CHANGED/ DATE & MONTH EACH IS A SINGLE SPAN WHICH CHANGES ON FORM INPUT -->
+          </div>
+        </div>
+        <div class="card--container">
+          <img src="images/bg-card-back.png" alt="" class="card card--back"/>
+          <span class="card--cvc">000</span>
+        </div>
       </div>
-    </div>
-    <div class="card--container">
-      <img src="images/bg-card-back.png" alt="" class="card card--back"/>
-      <span class="card--cvc">000</span>
     </div>
     <form>
       <label for="cardholder_name">CARDHOLDER NAME</label>

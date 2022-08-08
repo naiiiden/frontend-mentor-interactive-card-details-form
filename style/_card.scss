@@ -1,0 +1,86 @@
+.card--bg {
+    background: url("../images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.card--main--container {
+    position: relative;
+    height: 15rem;
+    width: 300px;
+    margin: auto;
+
+    .card--container {
+        width: 275px;
+        height: auto;
+        position: absolute;
+
+        &:nth-child(1) {
+            z-index: 9;
+            top: 7rem;
+            left: 0;
+        }
+        
+        &:nth-child(2) {
+            top: 1rem;
+            // margin-left: 0rem;
+            right: 0;
+        }
+
+        .card {
+            position: relative;
+        }
+
+        .card--logo {
+            position: absolute;
+            left: 0;
+            padding: 0.75rem 0 0 0.75rem;
+        }
+
+        .card--number {
+            width: 100%;
+            position: absolute;
+            color: $white;
+            font-size: 1.25rem;
+            letter-spacing: .125rem;
+            top: 5.5rem;
+            right: 0;
+            text-align: center;
+        }
+
+        .name-exp--container {
+            position: absolute;
+            width: 100%;
+            margin: auto;
+            right: 0;
+            bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $white;
+            padding: 0 .75rem;
+
+            .card--name {
+                font-size: .75rem;
+                letter-spacing: .4px;
+            }
+
+            .card--exp {
+                font-size: .75rem;
+                letter-spacing: .4px;
+            }
+        }
+
+        .card--cvc {
+            position: absolute;
+            right: 2.25rem;
+            top: 4.075rem;
+            color: $white;
+            font-size: .875rem;
+        }
+    }
+}
+
+form {
+    margin-top: 5rem;
+}
