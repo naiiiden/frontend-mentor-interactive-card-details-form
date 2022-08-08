@@ -5,11 +5,12 @@
     align-items: center;
     width: 300px;
     margin: auto;
-    // display: none;
+    display: none;
 
     h2 {
         color: $very-dark-violet;
         font-weight: 500;
+        font-size: 2rem;
     }
 
     p {
@@ -17,6 +18,7 @@
     }
 
     a {
+        margin-top: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -27,5 +29,13 @@
         width: 100%;
         color: $white;
         text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card--completion {
+        a {
+            height: 2.75rem;
+        }
     }
 }

@@ -224,7 +224,6 @@ form #submit {
   form {
     width: 350px;
     gap: 1.25rem;
-    display: none;
   }
   form label {
     font-size: 0.9375rem;
@@ -253,15 +252,18 @@ form #submit {
   align-items: center;
   width: 300px;
   margin: auto;
+  display: none;
 }
 .card--completion h2 {
   color: hsl(278deg, 68%, 11%);
   font-weight: 500;
+  font-size: 2rem;
 }
 .card--completion p {
   color: hsl(279deg, 6%, 55%);
 }
 .card--completion a {
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,4 +274,10 @@ form #submit {
   width: 100%;
   color: hsl(0deg, 0%, 100%);
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .card--completion a {
+    height: 2.75rem;
+  }
 }/*# sourceMappingURL=general.css.map */
