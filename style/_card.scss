@@ -23,7 +23,6 @@
         
         &:nth-child(2) {
             top: 1rem;
-            // margin-left: 0rem;
             right: 0;
         }
 
@@ -77,6 +76,52 @@
             top: 4.075rem;
             color: $white;
             font-size: .875rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card--main--container {
+        height: 17.5rem;
+        width: 350px;
+
+        .card--container {
+            width: 325px;
+
+            &:nth-child(1) {
+                top: 9rem;
+            }
+            
+            &:nth-child(2) {
+                top: 2rem;
+            }
+
+            .card--logo {
+                padding: 0.7rem 0 0 0.7rem;
+            }
+    
+            .card--number {
+                font-size: 1.375rem;
+                letter-spacing: 3.25px;
+                top: 6rem;
+            }
+    
+            .name-exp--container {
+                padding: 0 .825rem;
+    
+                .card--name {
+                    font-size: .8125rem;
+                }
+    
+                .card--exp {
+                    font-size: .8125rem;
+                }
+            }
+
+            .card--cvc {
+                font-size: 1rem;
+                top: 4.75rem;
+            }
         }
     }
 }
