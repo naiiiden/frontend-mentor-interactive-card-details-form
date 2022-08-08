@@ -18,6 +18,7 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-bottom: 3rem;
 }
 main .card--bg {
   margin-bottom: 3rem;
@@ -26,6 +27,14 @@ main .form--completion--container {
   margin: auto;
 }
 
+@media screen and (min-width: 768px) {
+  main {
+    padding-bottom: 5rem;
+  }
+  main .card--bg {
+    margin-bottom: 5rem;
+  }
+}
 img {
   max-width: 100%;
   height: auto;
