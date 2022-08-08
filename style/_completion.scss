@@ -5,10 +5,11 @@
     align-items: center;
     width: 300px;
     margin: auto;
-    display: none;
+    // display: none;
 
     h2 {
         color: $very-dark-violet;
+        font-weight: 500;
     }
 
     p {
@@ -21,7 +22,7 @@
         justify-content: center;
         background: $very-dark-violet;
         font-size: 1.125rem;
-        height: 3rem;
+        height: 2.625rem;
         border-radius: 5px;
         width: 100%;
         color: $white;

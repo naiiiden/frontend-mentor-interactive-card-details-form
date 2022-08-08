@@ -224,6 +224,7 @@ form #submit {
   form {
     width: 350px;
     gap: 1.25rem;
+    display: none;
   }
   form label {
     font-size: 0.9375rem;
@@ -252,10 +253,10 @@ form #submit {
   align-items: center;
   width: 300px;
   margin: auto;
-  display: none;
 }
 .card--completion h2 {
   color: hsl(278deg, 68%, 11%);
+  font-weight: 500;
 }
 .card--completion p {
   color: hsl(279deg, 6%, 55%);
@@ -266,7 +267,7 @@ form #submit {
   justify-content: center;
   background: hsl(278deg, 68%, 11%);
   font-size: 1.125rem;
-  height: 3rem;
+  height: 2.625rem;
   border-radius: 5px;
   width: 100%;
   color: hsl(0deg, 0%, 100%);
