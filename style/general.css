@@ -65,6 +65,10 @@ main .form--completion--container {
 img {
   max-width: 100%;
   height: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .card--bg {
@@ -83,6 +87,10 @@ img {
   width: 275px;
   height: auto;
   position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .card--main--container .card--container:nth-child(1) {
   z-index: 9;
