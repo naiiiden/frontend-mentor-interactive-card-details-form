@@ -66,6 +66,14 @@ main {
     }
 }
 
+@media screen and (min-width: 1280px) {
+    main {
+        .card--bg {
+            width: 30rem;
+        }
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;

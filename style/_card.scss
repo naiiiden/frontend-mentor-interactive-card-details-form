@@ -154,3 +154,41 @@
         }
     }
 }
+
+@media screen and (min-width: 1280px) {
+    .card--main--container {
+        .card--container {
+            width: 375px;
+
+            &:nth-child(1) {
+                top: -5rem;
+                left: -5rem;
+            }
+            
+            &:nth-child(2) {
+                left: -1rem;
+                top: 10rem;
+            }
+
+            .card--cvc {
+                top: 5.6125rem;
+                right: 2.5rem;
+            }
+
+            .card--number {
+                top: 7.5rem;
+                font-size: 1.625rem;
+            }
+
+            .name-exp--container {
+                .card--name {
+                    font-size: .9rem;
+                }
+    
+                .card--exp {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
