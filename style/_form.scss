@@ -103,3 +103,35 @@ form {
         }
     }
 }
+
+@media screen and (min-width: 1280px) {
+    form {
+        width: 375px;
+        gap: 1.5rem;
+
+        label {
+            font-size: 1rem;
+        }
+
+        .label--input--container {
+            gap: .625rem;
+
+            .error--message {
+                font-size: .875rem;
+            }
+
+            input {
+                height: 2.875rem;
+
+                &::placeholder {
+                    font-size: 1rem;
+                    letter-spacing: .5px;
+                }
+            }
+        }
+
+        #submit {
+            height: 2.875rem;
+        }
+    }
+}

@@ -358,6 +358,39 @@ form #submit {
     height: 2.75rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  form {
+    width: 375px;
+    gap: 1.5rem;
+  }
+  form label {
+    font-size: 1rem;
+  }
+  form .label--input--container {
+    gap: 0.625rem;
+  }
+  form .label--input--container .error--message {
+    font-size: 0.875rem;
+  }
+  form .label--input--container input {
+    height: 2.875rem;
+  }
+  form .label--input--container input::-moz-placeholder {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  form .label--input--container input:-ms-input-placeholder {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  form .label--input--container input::placeholder {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  form #submit {
+    height: 2.875rem;
+  }
+}
 .card--completion {
   display: flex;
   flex-direction: column;
