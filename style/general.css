@@ -35,6 +35,23 @@ main .form--completion--container {
     margin-bottom: 5rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  main {
+    flex-direction: row;
+    padding-bottom: unset;
+    position: relative;
+  }
+  main .card--bg {
+    background: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20rem;
+    margin-bottom: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 img {
   max-width: 100%;
   height: auto;
@@ -146,6 +163,29 @@ img {
   .card--main--container .card--container .card--cvc {
     font-size: 1rem;
     top: 4.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card--main--container {
+    width: unset;
+  }
+  .card--main--container .card--container {
+    width: 350px;
+  }
+  .card--main--container .card--container:nth-child(1) {
+    top: -5rem;
+    left: -8rem;
+  }
+  .card--main--container .card--container:nth-child(2) {
+    left: -5rem;
+    top: 10rem;
+  }
+  .card--main--container .card--container .card--cvc {
+    top: 5.2125rem;
+  }
+  .card--main--container .card--container .card--number {
+    top: 6.5rem;
+    font-size: 1.5rem;
   }
 }
 form {

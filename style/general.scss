@@ -47,6 +47,25 @@ main {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    main {
+        flex-direction: row;
+        padding-bottom: unset;
+        position: relative;
+
+        .card--bg {
+            background: url("../images/bg-main-desktop.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 20rem;
+            margin-bottom: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;

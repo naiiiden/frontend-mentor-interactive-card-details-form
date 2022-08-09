@@ -125,3 +125,32 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .card--main--container {
+        width: unset;
+
+        .card--container {
+            width: 350px;
+
+            &:nth-child(1) {
+                top: -5rem;
+                left: -8rem;
+            }
+            
+            &:nth-child(2) {
+                left: -5rem;
+                top: 10rem;
+            }
+
+            .card--cvc {
+                top: 5.2125rem;
+            }
+
+            .card--number {
+                top: 6.5rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
