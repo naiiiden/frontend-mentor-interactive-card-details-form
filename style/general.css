@@ -429,7 +429,6 @@ form #submit {
   color: hsl(279deg, 6%, 55%);
 }
 .card--completion a {
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -450,8 +449,17 @@ form #submit {
 @media screen and (min-width: 1280px) {
   .card--completion {
     display: flex;
+    gap: 1.25rem;
   }
   .card--completion a {
     height: 2.875rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card--completion {
+    gap: 1.5rem;
+  }
+  .card--completion a {
+    height: 3rem;
   }
 }/*# sourceMappingURL=general.css.map */

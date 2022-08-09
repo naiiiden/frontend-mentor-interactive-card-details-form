@@ -19,7 +19,6 @@
     }
 
     a {
-        margin-top: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -44,9 +43,20 @@
 @media screen and (min-width: 1280px) {
     .card--completion {
         display: flex;
+        gap: 1.25rem;
 
         a {
             height: 2.875rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card--completion {
+        gap: 1.5rem;
+
+        a {
+            height: 3rem;
         }
     }
 }
