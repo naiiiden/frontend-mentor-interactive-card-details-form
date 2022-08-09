@@ -391,6 +391,24 @@ form #submit {
     height: 2.875rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  form {
+    width: 400px;
+    gap: 1.75rem;
+  }
+  form label {
+    font-size: 1.125rem;
+  }
+  form .label--input--container {
+    gap: 0.75rem;
+  }
+  form .label--input--container input {
+    height: 3rem;
+  }
+  form #submit {
+    height: 3rem;
+  }
+}
 .card--completion {
   display: flex;
   flex-direction: column;

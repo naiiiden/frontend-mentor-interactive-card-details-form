@@ -135,3 +135,26 @@ form {
         }
     }
 }
+
+@media screen and (min-width: 1440px) {
+    form {
+        width: 400px;
+        gap: 1.75rem;
+
+        label {
+            font-size: 1.125rem;
+        }
+
+        .label--input--container {
+            gap: .75rem;
+
+            input {
+                height: 3rem;
+            }
+        }
+
+        #submit {
+            height: 3rem;
+        }
+    }
+}
