@@ -362,6 +362,7 @@ form #submit {
   form {
     width: 375px;
     gap: 1.5rem;
+    display: none;
   }
   form label {
     font-size: 1rem;
@@ -422,6 +423,7 @@ form #submit {
   color: hsl(278deg, 68%, 11%);
   font-weight: 500;
   font-size: 2rem;
+  letter-spacing: 2px;
 }
 .card--completion p {
   color: hsl(279deg, 6%, 55%);
@@ -443,5 +445,13 @@ form #submit {
 @media screen and (min-width: 768px) {
   .card--completion a {
     height: 2.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card--completion {
+    display: flex;
+  }
+  .card--completion a {
+    height: 2.875rem;
   }
 }/*# sourceMappingURL=general.css.map */
