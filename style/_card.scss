@@ -192,3 +192,50 @@
         }
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .card--main--container {
+        .card--container {
+            width: 450px;
+
+            &:nth-child(1) {
+                top: -6.5rem;
+                left: -4rem;
+            }
+            
+            &:nth-child(2) {
+                left: -1rem;
+                top: 11.5rem;
+            }
+
+            .card--cvc {
+                top: 6.625rem;
+                right: 3.25rem;
+                font-size: 1.25rem;
+            }
+
+            .card--number {
+                top: 9rem;
+                font-size: 1.75rem;
+                letter-spacing: 5px;
+            }
+
+            .name-exp--container {
+                padding: 0 1.375rem;
+                padding-right: 1.75rem;
+
+                .card--name {
+                    font-size: 1rem;
+                }
+    
+                .card--exp {
+                    font-size: 1rem;
+                }
+            }
+
+            .card--logo {
+                padding: 1.125rem 0 0 1.125rem;
+            }
+        }
+    }
+}
