@@ -331,6 +331,7 @@ form #submit {
   border: none;
   border-radius: 5px;
   height: 2.625rem;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -362,7 +363,6 @@ form #submit {
   form {
     width: 375px;
     gap: 1.5rem;
-    display: none;
   }
   form label {
     font-size: 1rem;
@@ -448,7 +448,6 @@ form #submit {
 }
 @media screen and (min-width: 1280px) {
   .card--completion {
-    display: flex;
     gap: 1.25rem;
   }
   .card--completion a {
