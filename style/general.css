@@ -126,6 +126,7 @@ img {
 .card--main--container .card--container .name-exp--container .card--name {
   font-size: 0.75rem;
   letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 .card--main--container .card--container .name-exp--container .card--exp {
   font-size: 0.75rem;
