@@ -37,8 +37,14 @@ document.querySelector("#card_exp_date_mm").addEventListener("input", (e) => {
     }
     document.querySelector(".card--mm").textContent = document.querySelector("#card_exp_date_mm").value.slice(0, document.querySelector("#card_exp_date_mm").maxLength);
 });
-document.querySelector("#card_exp_date_mm").addEventListener("keypress", e => {
-    if (!/[0-9\./]+/.test(e.key)) { 
-        e.preventDefault();
-    };
+
+// CARD DATE YEAR INPUT
+document.querySelector("#card_exp_date_yy").addEventListener("input", (e) => {
+    if (document.querySelector("#card_exp_date_yy").value > document.querySelector("#card_exp_date_yy").max) {
+        document.querySelector("#card_exp_date_yy").value = 0;
+    }
+    if (document.querySelector("#card_exp_date_yy").value.length > document.querySelector("#card_exp_date_yy").maxLength) {
+        document.querySelector("#card_exp_date_yy").value = document.querySelector("#card_exp_date_yy").value.slice(0, document.querySelector("#card_exp_date_yy").maxLength); 
+    }
+    document.querySelector(".card--yy").textContent = document.querySelector("#card_exp_date_yy").value.slice(0, document.querySelector("#card_exp_date_yy").maxLength);
 });
