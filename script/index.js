@@ -93,6 +93,12 @@ document.querySelector("#submit").addEventListener("click", (e) => {
         document.querySelector("#card_exp_date_mm").style.border = "1px solid #ff5252";
         document.querySelector("#card_exp_date_yy").style.border = "1px solid #ff5252";
     }
+    if (document.querySelector("#card_exp_date_mm").value != "") {
+        document.querySelector("#card_exp_date_mm").style.border = "1px solid #c4c4c4";
+    }
+    if (document.querySelector("#card_exp_date_yy").value != "") {
+        document.querySelector("#card_exp_date_yy").style.border = "1px solid #c4c4c4";
+    }
     // EMPTY CVC INPUT
     if (document.querySelector("#card_cvc").value == "") {
         document.querySelector(".card--cvc--error").style.display = "block";
