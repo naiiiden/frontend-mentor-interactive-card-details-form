@@ -297,6 +297,15 @@ form .label--input--container input {
   height: 2.625rem;
   padding: 0.5rem 0.75rem;
   font-family: inherit;
+  transition: border 0.1s;
+  outline: none;
+  color: hsl(278deg, 68%, 11%);
+  font-weight: 500;
+  font-size: 1rem;
+}
+form .label--input--container input:focus {
+  border: 1px solid hsl(278deg, 68%, 11%);
+  transition: border 0.1s;
 }
 form .label--input--container input::-moz-placeholder {
   font-family: Space Grotesk;
