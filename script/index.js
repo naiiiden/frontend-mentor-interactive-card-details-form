@@ -37,7 +37,11 @@ document.querySelector("#card_number").addEventListener("keypress", e => {
 });
 
 // CARD DATE MONTH INPUT
-document.querySelector("#card_exp_date_mm").addEventListener("input", (e) => {
+document.querySelector("#card_exp_date_mm").addEventListener("input", () => {
+    document.querySelector("#card_exp_date_mm").style.border = "1px solid #c4c4c4";
+    if (document.querySelector("#card_exp_date_mm").value != "" && document.querySelector("#card_exp_date_yy").value != "") {
+        document.querySelector(".card--date--error").style.display = "none";
+    }
     if (document.querySelector("#card_exp_date_mm").value > document.querySelector("#card_exp_date_mm").max) {
         document.querySelector("#card_exp_date_mm").value = 0;
     }
@@ -48,7 +52,11 @@ document.querySelector("#card_exp_date_mm").addEventListener("input", (e) => {
 });
 
 // CARD DATE YEAR INPUT
-document.querySelector("#card_exp_date_yy").addEventListener("input", (e) => {
+document.querySelector("#card_exp_date_yy").addEventListener("input", () => {
+    document.querySelector("#card_exp_date_yy").style.border = "1px solid #c4c4c4";
+    if (document.querySelector("#card_exp_date_mm").value != "" && document.querySelector("#card_exp_date_yy").value != "") {
+        document.querySelector(".card--date--error").style.display = "none";
+    }
     if (document.querySelector("#card_exp_date_yy").value > document.querySelector("#card_exp_date_yy").max) {
         document.querySelector("#card_exp_date_yy").value = 0;
     }
@@ -70,5 +78,12 @@ document.querySelector("#submit").addEventListener("click", (e) => {
         document.querySelector(".card--number--error").style.display = "block";
         document.querySelector("#card_number").style.border = "1px solid #ff5252";
         e.preventDefault();
+    }
+
+    if (document.querySelector("#card_exp_date_mm").value == "" || document.querySelector("#card_exp_date_yy").value == "") {
+        document.querySelector(".card--date--error").style.display = "block";
+        document.querySelector("#card_exp_date_mm").style.border = "1px solid #ff5252";
+        document.querySelector("#card_exp_date_yy").style.border = "1px solid #ff5252";
+
     }
 });
