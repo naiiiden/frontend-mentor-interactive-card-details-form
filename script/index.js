@@ -81,6 +81,12 @@ document.querySelector("#submit").addEventListener("click", (e) => {
         document.querySelector(".card--number--error").style.display = "block";
         document.querySelector("#card_number").style.border = "1px solid #ff5252";
     }
+    else if (document.querySelector("#card_number").value.length < 19) {
+        document.querySelector(".card--number--error").style.display = "block";
+        document.querySelector("#card_number").style.border = "1px solid #ff5252";
+        document.querySelector(".card--number--error").textContent = "Card number must be 16 digits";
+
+    }
     // EMPTY DATE INPUT
     if (document.querySelector("#card_exp_date_mm").value == "" || document.querySelector("#card_exp_date_yy").value == "") {
         document.querySelector(".card--date--error").style.display = "block";
