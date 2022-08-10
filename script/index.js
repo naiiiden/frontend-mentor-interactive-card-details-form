@@ -70,23 +70,32 @@ document.querySelector("#card_exp_date_yy").addEventListener("input", () => {
 
 // SUBMIT
 document.querySelector("#submit").addEventListener("click", (e) => {
+    // EMPTY NAME INPUT
     if (document.querySelector("#cardholder_name").value == "") {
         document.querySelector(".card--name--error").style.display = "block";
         document.querySelector("#cardholder_name").style.border = "1px solid #ff5252";
         e.preventDefault();
     }
+    // EMPTY NUMBER INPUT
     if (document.querySelector("#card_number").value == "") {
         document.querySelector(".card--number--error").style.display = "block";
         document.querySelector("#card_number").style.border = "1px solid #ff5252";
         e.preventDefault();
     }
+    // EMPTY DATE INPUT
     if (document.querySelector("#card_exp_date_mm").value == "" || document.querySelector("#card_exp_date_yy").value == "") {
         document.querySelector(".card--date--error").style.display = "block";
         document.querySelector("#card_exp_date_mm").style.border = "1px solid #ff5252";
         document.querySelector("#card_exp_date_yy").style.border = "1px solid #ff5252";
     }
+    // EMPTY CVC INPUT
     if (document.querySelector("#card_cvc").value == "") {
         document.querySelector(".card--cvc--error").style.display = "block";
         document.querySelector("#card_cvc").style.border = "1px solid #ff5252";
+    }
+    else if (document.querySelector("#card_cvc").value.length < 3) {
+        document.querySelector(".card--cvc--error").style.display = "block";
+        document.querySelector("#card_cvc").style.border = "1px solid #ff5252";
+        document.querySelector(".card--cvc--error").textContent = "CVC must be at least 3 digits";
     }
 });
