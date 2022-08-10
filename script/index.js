@@ -15,6 +15,11 @@ document.querySelector("#card_cvc").addEventListener("input", () => {
     }
     document.querySelector(".card--cvc").textContent = document.querySelector("#card_cvc").value.slice(0, document.querySelector("#card_cvc").maxLength);
 });
+document.querySelector("#card_cvc").addEventListener("keypress", e => {
+    if (!/[0-9\./]+/.test(e.key)) { 
+        e.preventDefault();
+    };
+});
 
 // CARD NUMBER INPUT
 document.querySelector("#card_number").addEventListener("input", (e) => {
