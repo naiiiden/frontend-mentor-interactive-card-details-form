@@ -1,6 +1,8 @@
 // CARDHOLDER NAME INPUT
 document.querySelector("#cardholder_name").addEventListener("input", () => {
     document.querySelector(".card--name").textContent = document.querySelector("#cardholder_name").value;
+    document.querySelector("#cardholder_name").style.border = "1px solid #c4c4c4";
+    document.querySelector(".card--name--error").style.display = "none";
 });
 document.querySelector("#cardholder_name").addEventListener("keypress", e => {
     if (/[0-9\./]+/.test(e.key)) { 
@@ -52,4 +54,13 @@ document.querySelector("#card_exp_date_yy").addEventListener("input", (e) => {
         document.querySelector("#card_exp_date_yy").value = document.querySelector("#card_exp_date_yy").value.slice(0, document.querySelector("#card_exp_date_yy").maxLength); 
     }
     document.querySelector(".card--yy").textContent = document.querySelector("#card_exp_date_yy").value.slice(0, document.querySelector("#card_exp_date_yy").maxLength);
+});
+
+// SUBMIT
+document.querySelector("#submit").addEventListener("click", (e) => {
+    if (document.querySelector("#cardholder_name").value == "") {
+        document.querySelector(".card--name--error").style.display = "block";
+        document.querySelector("#cardholder_name").style.border = "1px solid #ff5252";
+        e.preventDefault();
+    }
 });

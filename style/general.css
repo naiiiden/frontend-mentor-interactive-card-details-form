@@ -293,6 +293,7 @@ form .label--input--container .error--message {
 }
 form .label--input--container input {
   border: 1px solid rgb(196, 196, 196);
+  background: transparent;
   border-radius: 5px;
   height: 2.625rem;
   padding: 0.5rem 0.75rem;
