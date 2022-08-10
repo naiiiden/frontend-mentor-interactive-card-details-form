@@ -15,3 +15,14 @@ document.querySelector("#card_cvc").addEventListener("input", () => {
     }
     document.querySelector(".card--cvc").textContent = document.querySelector("#card_cvc").value.slice(0, document.querySelector("#card_cvc").maxLength);
 });
+
+// CARD NUMBER INPUT
+document.querySelector("#card_number").addEventListener("input", (e) => {
+    e.target.value = e.target.value.replace(/\s/g, '').replace(/(\d{4})/g, '$1 ').trim();
+    document.querySelector(".card--number").textContent = document.querySelector("#card_number").value;
+});
+document.querySelector("#card_number").addEventListener("keypress", e => {
+    if (!/[0-9\./]+/.test(e.key)) { 
+        e.preventDefault();
+    };
+});
