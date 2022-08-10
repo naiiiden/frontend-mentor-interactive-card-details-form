@@ -27,6 +27,8 @@ document.querySelector("#card_cvc").addEventListener("keypress", e => {
 document.querySelector("#card_number").addEventListener("input", (e) => {
     e.target.value = e.target.value.replace(/\s/g, '').replace(/(\d{4})/g, '$1 ').trim();
     document.querySelector(".card--number").textContent = document.querySelector("#card_number").value;
+    document.querySelector("#card_number").style.border = "1px solid #c4c4c4";
+    document.querySelector(".card--number--error").style.display = "none";
 });
 document.querySelector("#card_number").addEventListener("keypress", e => {
     if (!/[0-9\./]+/.test(e.key)) { 
@@ -61,6 +63,12 @@ document.querySelector("#submit").addEventListener("click", (e) => {
     if (document.querySelector("#cardholder_name").value == "") {
         document.querySelector(".card--name--error").style.display = "block";
         document.querySelector("#cardholder_name").style.border = "1px solid #ff5252";
+        e.preventDefault();
+    }
+
+    if (document.querySelector("#card_number").value == "") {
+        document.querySelector(".card--number--error").style.display = "block";
+        document.querySelector("#card_number").style.border = "1px solid #ff5252";
         e.preventDefault();
     }
 });
