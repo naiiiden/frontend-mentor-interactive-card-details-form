@@ -12,6 +12,8 @@ document.querySelector("#cardholder_name").addEventListener("keypress", e => {
 
 // CVC INPUT
 document.querySelector("#card_cvc").addEventListener("input", () => {
+    document.querySelector("#card_cvc").style.border = "1px solid #c4c4c4";
+    document.querySelector(".card--cvc--error").style.display = "none";
     if (document.querySelector("#card_cvc").value.length > document.querySelector("#card_cvc").maxLength) {
         document.querySelector("#card_cvc").value = document.querySelector("#card_cvc").value.slice(0, document.querySelector("#card_cvc").maxLength); 
     }
@@ -73,17 +75,18 @@ document.querySelector("#submit").addEventListener("click", (e) => {
         document.querySelector("#cardholder_name").style.border = "1px solid #ff5252";
         e.preventDefault();
     }
-
     if (document.querySelector("#card_number").value == "") {
         document.querySelector(".card--number--error").style.display = "block";
         document.querySelector("#card_number").style.border = "1px solid #ff5252";
         e.preventDefault();
     }
-
     if (document.querySelector("#card_exp_date_mm").value == "" || document.querySelector("#card_exp_date_yy").value == "") {
         document.querySelector(".card--date--error").style.display = "block";
         document.querySelector("#card_exp_date_mm").style.border = "1px solid #ff5252";
         document.querySelector("#card_exp_date_yy").style.border = "1px solid #ff5252";
-
+    }
+    if (document.querySelector("#card_cvc").value == "") {
+        document.querySelector(".card--cvc--error").style.display = "block";
+        document.querySelector("#card_cvc").style.border = "1px solid #ff5252";
     }
 });
