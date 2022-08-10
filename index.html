@@ -17,7 +17,7 @@
           <span class="card--number">0000 0000 0000 0000</span>
           <div class="name-exp--container">
             <span class="card--name">JANE APPLESEED</span>
-            <span class="card--exp">00/00</span>
+            <span class="card--exp"><span class="card--mm">00</span>/<span class="card--yy">00</span></span>
             <!-- EXP. DATE TO BE CHANGED/ DATE & MONTH EACH IS A SINGLE SPAN WHICH CHANGES ON FORM INPUT -->
           </div>
         </div>
@@ -41,10 +41,10 @@
         </div>
         <div class="date--cvc--container">
           <div class="label--input--container date--container">
-            <label for="card_exp_date">EXP. DATE (MM/YY)</label>
+            <label for="card_exp_date_mm">EXP. DATE (MM/<span><label for="card_exp_date_yy">YY</label></span>)</label>
             <div class="date--input--container">
-              <input type="number" id="card_exp_date" name="card_exp_date" placeholder="MM"/>
-              <input type="number" id="card_exp_date" name="card_exp_date" placeholder="YY"/>
+              <input type="number" id="card_exp_date_mm" name="card_exp_date_mm" placeholder="MM" maxlength="2"/>
+              <input type="number" id="card_exp_date_yy" name="card_exp_date_yy" placeholder="YY" maxlength="2"/>
             </div>
             <span class="card--date--error error--message">Can't be blank</span>
           </div>
