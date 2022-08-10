@@ -28,6 +28,17 @@ document.querySelector("#card_number").addEventListener("keypress", e => {
 });
 
 // CARD DATE MONTH INPUT
-document.querySelector("#card_exp_date_mm").addEventListener("input", () => {
-    document.querySelector(".card--mm").textContent = document.querySelector("#card_exp_date_mm").value;
+document.querySelector("#card_exp_date_mm").addEventListener("input", (e) => {
+    if (document.querySelector("#card_exp_date_mm").value > document.querySelector("#card_exp_date_mm").max) {
+        document.querySelector("#card_exp_date_mm").value = 0;
+    }
+    if (document.querySelector("#card_exp_date_mm").value.length > document.querySelector("#card_exp_date_mm").maxLength) {
+        document.querySelector("#card_exp_date_mm").value = document.querySelector("#card_exp_date_mm").value.slice(0, document.querySelector("#card_exp_date_mm").maxLength); 
+    }
+    document.querySelector(".card--mm").textContent = document.querySelector("#card_exp_date_mm").value.slice(0, document.querySelector("#card_exp_date_mm").maxLength);
+});
+document.querySelector("#card_exp_date_mm").addEventListener("keypress", e => {
+    if (!/[0-9\./]+/.test(e.key)) { 
+        e.preventDefault();
+    };
 });

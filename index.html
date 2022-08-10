@@ -43,7 +43,7 @@
           <div class="label--input--container date--container">
             <label for="card_exp_date_mm">EXP. DATE (MM/<span><label for="card_exp_date_yy">YY</label></span>)</label>
             <div class="date--input--container">
-              <input type="text" id="card_exp_date_mm" name="card_exp_date_mm" placeholder="MM" maxlength="2"/>
+              <input type="number" id="card_exp_date_mm" name="card_exp_date_mm" placeholder="MM" maxlength="2" min="1" max="12"/>
               <input type="text" id="card_exp_date_yy" name="card_exp_date_yy" placeholder="YY" maxlength="2"/>
             </div>
             <span class="card--date--error error--message">Can't be blank</span>
