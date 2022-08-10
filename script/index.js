@@ -26,3 +26,8 @@ document.querySelector("#card_number").addEventListener("keypress", e => {
         e.preventDefault();
     };
 });
+
+// CARD DATE MONTH INPUT
+document.querySelector("#card_exp_date_mm").addEventListener("input", () => {
+    document.querySelector(".card--mm").textContent = document.querySelector("#card_exp_date_mm").value;
+});
