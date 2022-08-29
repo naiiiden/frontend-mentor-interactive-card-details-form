@@ -55,10 +55,10 @@
         </div>
         <input type="submit" id="submit" value="Confirm"/>
       </form>
-      <div class="card--completion">
+      <div class="card--completion" role="dialog" aria-labelledby="completionTitle" aria-describedby="completionDesc">
         <img src="/images/icon-complete.svg" alt=""/>
-        <h2 class="completion--heading">THANK YOU!</h2>
-        <p class="completion--p">We've added your card details</p>
+        <h2 class="completion--heading" id="completionTitle">THANK YOU!</h2>
+        <p class="completion--p" id="completionDesc">We've added your card details</p>
         <a href="/" class="completion--link">Continue</a>
       </div>
     </div>
