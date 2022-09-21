@@ -75,13 +75,17 @@ document.querySelector("#submit").addEventListener("click", (e) => {
     if (document.querySelector("#cardholder_name").value == "") {
         document.querySelector(".card--name--error").style.display = "block";
         document.querySelector("#cardholder_name").style.border = "1px solid #ff5252";
+        // document.querySelector("#cardholder_name").focus();
     }
     // EMPTY NUMBER INPUT
     if (document.querySelector("#card_number").value == "") {
         document.querySelector(".card--number--error").style.display = "block";
         document.querySelector("#card_number").style.border = "1px solid #ff5252";
+        // if (document.querySelector("#cardholder_name").value != "") {
+            // document.querySelector("#card_number").focus();
+        // }
     }
-    else if (document.querySelector("#card_number").value.length < 19) {
+    else if (document.querySelector("#card_number").value != "" && document.querySelector("#card_number").value.length < 19) {
         document.querySelector(".card--number--error").style.display = "block";
         document.querySelector("#card_number").style.border = "1px solid #ff5252";
         document.querySelector(".card--number--error").textContent = "Card number must be 16 digits";
@@ -109,7 +113,7 @@ document.querySelector("#submit").addEventListener("click", (e) => {
         document.querySelector(".card--cvc--error").textContent = "CVC must be at least 3 digits";
     }
     // EVERYTHING IS CORRECT
-    if (document.querySelector("#cardholder_name").value != "" && document.querySelector("#card_number").value != "" && document.querySelector("#card_exp_date_mm").value != "" && document.querySelector("#card_exp_date_yy").value != "" && document.querySelector("#card_cvc").value != "") {
+    if (document.querySelector("#cardholder_name").value != "" && document.querySelector("#card_number").value != "" && document.querySelector("#card_number").value.length == 19 && document.querySelector("#card_exp_date_mm").value != "" && document.querySelector("#card_exp_date_yy").value != "" && document.querySelector("#card_cvc").value != "") {
         document.querySelector("form").style.display = "none";
         document.querySelector(".card--completion").style.display = "flex";
     }
