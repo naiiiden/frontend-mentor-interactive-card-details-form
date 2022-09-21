@@ -75,26 +75,39 @@ document.querySelector("#submit").addEventListener("click", (e) => {
     if (document.querySelector("#cardholder_name").value == "") {
         document.querySelector(".card--name--error").style.display = "block";
         document.querySelector("#cardholder_name").style.border = "1px solid #ff5252";
-        // document.querySelector("#cardholder_name").focus();
+        document.querySelector("#cardholder_name").focus();
     }
     // EMPTY NUMBER INPUT
     if (document.querySelector("#card_number").value == "") {
         document.querySelector(".card--number--error").style.display = "block";
         document.querySelector("#card_number").style.border = "1px solid #ff5252";
-        // if (document.querySelector("#cardholder_name").value != "") {
-            // document.querySelector("#card_number").focus();
-        // }
+
+        if (document.querySelector("#cardholder_name").value != "") {
+            document.querySelector("#card_number").focus();
+        }
     }
     else if (document.querySelector("#card_number").value != "" && document.querySelector("#card_number").value.length < 19) {
         document.querySelector(".card--number--error").style.display = "block";
         document.querySelector("#card_number").style.border = "1px solid #ff5252";
         document.querySelector(".card--number--error").textContent = "Card number must be 16 digits";
+       
+        if (document.querySelector("#card_number").value.length < 19) {
+            document.querySelector("#card_number").focus();
+        }
     }
     // EMPTY DATE INPUT
     if (document.querySelector("#card_exp_date_mm").value == "" || document.querySelector("#card_exp_date_yy").value == "") {
         document.querySelector(".card--date--error").style.display = "block";
         document.querySelector("#card_exp_date_mm").style.border = "1px solid #ff5252";
         document.querySelector("#card_exp_date_yy").style.border = "1px solid #ff5252";
+
+        if (document.querySelector("#cardholder_name").value != "" && document.querySelector("#card_number").value != "") {
+            document.querySelector("#card_exp_date_mm").focus();
+        }
+
+        if (document.querySelector("#cardholder_name").value != "" && document.querySelector("#card_number").value != "" && document.querySelector("#card_exp_date_mm").value != "") {
+            document.querySelector("#card_exp_date_yy").focus();
+        }
     }
     if (document.querySelector("#card_exp_date_mm").value != "") {
         document.querySelector("#card_exp_date_mm").style.border = "1px solid #c4c4c4";
@@ -106,6 +119,10 @@ document.querySelector("#submit").addEventListener("click", (e) => {
     if (document.querySelector("#card_cvc").value == "") {
         document.querySelector(".card--cvc--error").style.display = "block";
         document.querySelector("#card_cvc").style.border = "1px solid #ff5252";  
+
+        if (document.querySelector("#cardholder_name").value != "" && document.querySelector("#card_number").value != "" && document.querySelector("#card_exp_date_mm").value != "" && document.querySelector("#card_exp_date_yy").value != "") {
+            document.querySelector("#card_cvc").focus();
+        }
     }
     else if (document.querySelector("#card_cvc").value.length < 3) {
         document.querySelector(".card--cvc--error").style.display = "block";
