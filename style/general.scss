@@ -28,6 +28,11 @@ main {
     flex-direction: column;
     padding-bottom: 3rem;
 
+    .sr-only {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
     .card--bg {
         margin-bottom: 3rem;
     }

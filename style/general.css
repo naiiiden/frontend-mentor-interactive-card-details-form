@@ -20,6 +20,10 @@ main {
   flex-direction: column;
   padding-bottom: 3rem;
 }
+main .sr-only {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
 main .card--bg {
   margin-bottom: 3rem;
 }
